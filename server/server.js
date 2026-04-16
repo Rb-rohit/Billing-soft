@@ -18,7 +18,7 @@ const app = express();
 const corsOptions = { 
     origin: [
         "http://localhost:5173",
-        "https://bill-soft-five.vercel.app"
+        "https://billing-soft-topaz.vercel.app/"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials:true 
