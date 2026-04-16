@@ -27,7 +27,7 @@ const BillSummary = ({ cart = [], setCart }) => {
             const token = localStorage.getItem("token");
 
             const response = await axios.post(
-                "https://bill-soft.onrender.com/api/sales",
+                "https://billing-soft-roxt.onrender.com/api/sales",
                 {
                     customerName: customerName || "Rohit",
                     paymentMethod: payment,
@@ -46,7 +46,7 @@ const BillSummary = ({ cart = [], setCart }) => {
             // download invoice
             if (saleId) {
                 window.open(
-                `https://bill-soft.onrender.com/api/sales/${saleId}/invoice`,
+                `https://billing-soft-roxt.onrender.com/api/sales/${saleId}/invoice`,
                 "_blank"
                 );
             }

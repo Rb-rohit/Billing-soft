@@ -26,7 +26,7 @@ const DashboardCards = () => {
             try {
                 const token = localStorage.getItem("token");
                 const res = await axios.get(
-                    "http://localhost:5000/api/dashboard/stats",
+                    "https://billing-soft-roxt.onrender.com/api/dashboard/stats",
                     {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -52,7 +52,7 @@ const DashboardCards = () => {
             const token = localStorage.getItem("token");
             try {
                 const res = await axios.get(
-                "http://localhost:5000/api/inventory/low-stock",
+                "https://billing-soft-roxt.onrender.com/api/inventory/low-stock",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -78,7 +78,7 @@ const DashboardCards = () => {
                 const token = localStorage.getItem("token");
 
                 const res = await axios.get(
-                    "http://localhost:5000/api/products",
+                    "https://billing-soft-roxt.onrender.com/api/products",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -102,7 +102,7 @@ const DashboardCards = () => {
             const token = localStorage.getItem("token");
 
             const res = await axios.get(
-                "http://localhost:5000/api/sales",
+                "https://billing-soft-roxt.onrender.com/api/sales",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

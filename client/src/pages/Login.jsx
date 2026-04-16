@@ -22,7 +22,7 @@ const Login = () => {
       password: password
     }
 
-    axios.post('http://localhost:5000/api/auth/login', payload, {withCredentials: true})
+    axios.post('https://billing-soft-roxt.onrender.com/api/auth/login', payload, {withCredentials: true})
       .then((res) => {
         toast("Login Successfully !");
         setLoading(false);

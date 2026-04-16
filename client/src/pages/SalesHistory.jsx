@@ -12,7 +12,7 @@ const SalesHistory = () => {
             const token = localStorage.getItem("token");
 
         const res = await axios.get(
-            "http://localhost:5000/api/sales",
+            "https://billing-soft-roxt.onrender.com/api/sales",
             {
                 headers: { Authorization: `Bearer ${token}` }
             }

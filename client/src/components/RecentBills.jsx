@@ -11,7 +11,7 @@ const RecentBills = () => {
         const fetchRecentSales = async () => {
             try {
                 const res = await axios.get(
-                    "http://localhost:5000/api/sales/recent"
+                    "https://billing-soft-roxt.onrender.com/api/sales/recent"
                 );
 
                 setSales(res.data.sales);

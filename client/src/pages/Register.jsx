@@ -24,7 +24,7 @@ const Register = () => {
             role: role
         }
 
-        axios.post('http://localhost:5000/api/auth/register', payload)
+        axios.post('https://billing-soft-roxt.onrender.com/api/auth/register', payload)
             .then((res) => {
                 toast("Register Successfull!");
                 setLoading(false)

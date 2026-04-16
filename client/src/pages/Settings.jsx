@@ -15,7 +15,7 @@ const Settings = () => {
     const fetchSettings = async () => {
         try{
             const res = await axios.get(
-            "http://localhost:5000/api/settings"
+            "https://billing-soft-roxt.onrender.com/api/settings"
         );
 
         setShopName(res.data.shopName || "");
@@ -36,7 +36,7 @@ const Settings = () => {
             setLoading(true);
 
             await axios.put(
-            "http://localhost:5000/api/settings",
+            "https://billing-soft-roxt.onrender.com/api/settings",
             {
                 shopName,
                 gstNumber,

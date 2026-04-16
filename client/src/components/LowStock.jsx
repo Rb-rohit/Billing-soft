@@ -13,7 +13,7 @@ const LowStock = () => {
                 const token = localStorage.getItem("token");
 
                 const res = await axios.get(
-                    "http://localhost:5000/api/inventory/low-stock",
+                    "https://billing-soft-roxt.onrender.com/api/inventory/low-stock",
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

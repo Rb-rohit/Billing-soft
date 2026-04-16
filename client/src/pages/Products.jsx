@@ -20,7 +20,7 @@ const Products = () => {
   // fetch product
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/products?page=${page}&limit=5`,{
+      const res = await axios.get(`https://billing-soft-roxt.onrender.com/api/products?page=${page}&limit=5`,{
       headers: {Authorization: `Bearer ${token}` }
     });
     setProducts(res.data.products || []);
@@ -48,7 +48,7 @@ const Products = () => {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:5000/api/products/${editId}`,
+          `https://billing-soft-roxt.onrender.com/api/products/${editId}`,
           form,
           {headers: {Authorization: `Bearer ${token}`} }
         )
@@ -58,7 +58,7 @@ const Products = () => {
         setEditId(null);
       }else {
         await axios.post(
-          "http://localhost:5000/api/products/add",
+          "https://billing-soft-roxt.onrender.com/api/products/add",
           form,
           { headers: {Authorization: `Bearer ${token}`} }
         )
@@ -99,7 +99,7 @@ const Products = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-      `http://localhost:5000/api/products/${id}`,
+      `https://billing-soft-roxt.onrender.com/api/products/${id}`,
       { headers: {Authorization: `Bearer ${token}`} }
     )
       .then(()=> {
