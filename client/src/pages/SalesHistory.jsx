@@ -188,7 +188,7 @@ const SalesHistory = () => {
 
                         <td className="p-3">
                             <a
-                                href={`http://localhost:5000/api/sales/${sale._id}/invoice`}
+                                href={`https://billing-soft-roxt.onrender.com/api/sales/${sale._id}/invoice`}
                                 target="_blank"
                                 className="text-indigo-600 hover:underline"
                             >
