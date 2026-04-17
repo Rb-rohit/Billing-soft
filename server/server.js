@@ -16,16 +16,13 @@ const app = express();
 
 //cors configuration
 const corsOptions = { 
-    origin: [
-        "http://localhost:5173",
-        "https://billing-soft-topaz.vercel.app/"
-    ],
+    origin:"https://billing-soft-topaz.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials:true 
 };
 
 app.use(cors(corsOptions));
-// app.options("*", cors(corsOptions)); //handle preflight
+app.options("*", cors(corsOptions)); //handle preflight
 
 // middleware 
 app.use(express.json());
